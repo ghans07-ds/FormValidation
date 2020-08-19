@@ -6,25 +6,25 @@ html,body
 .container-fluid .row .leftside
 {
     height: 100vh;
-    background-color: aqua;
+    background-color: #cb3b3b;
 }
 .container-fluid .row .center
 {
     height:100vh;
-    background-color: brown;
+    background-color: white;
 }
 
 .container-fluid .row .rightside
 {
     height: 100vh;
-    background-color: aqua;
+    background-color: #cb3b3b;
 }
 
 .container-fluid .row .center .form1
 {
     margin: 10%;
     padding: 40px;
-    background-color: darkblue;
+    background-color:#e0c45c;
     border-radius: 25px;
 }
 .container-fluid .row .center .form1 input
@@ -36,6 +36,9 @@ html,body
     border-radius: 10px;
     outline: none;
     border: none;
-    /* box-shadow: none; */
-    /* background-color: darkblue; */
+}
+.container-fluid .row .center .form1 .Button input
+{
+    background-color:#cb3b3b ;
+    color: white;
 }
