@@ -1,5 +1,41 @@
+html,body
+{
+    height: 100%;
+    margin: 0px;
+}
 .container-fluid .row .leftside
 {
-    height: 500px;
+    height: 100vh;
     background-color: aqua;
+}
+.container-fluid .row .center
+{
+    height:100vh;
+    background-color: brown;
+}
+
+.container-fluid .row .rightside
+{
+    height: 100vh;
+    background-color: aqua;
+}
+
+.container-fluid .row .center .form1
+{
+    margin: 10%;
+    padding: 40px;
+    background-color: darkblue;
+    border-radius: 25px;
+}
+.container-fluid .row .center .form1 input
+{
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    /* box-shadow: none; */
+    /* background-color: darkblue; */
 }
