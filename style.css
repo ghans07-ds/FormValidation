@@ -22,16 +22,17 @@ html,body
 
 .container-fluid .row .center .form1
 {
-    margin: 10%;
+    margin: 8%;
     padding: 40px;
     background-color:#e0c45c;
     border-radius: 25px;
+    box-shadow: 2px 2px 5px 5px black;
 }
 .container-fluid .row .center .form1 input
 {
     width: 100%;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 10px;
+    /* margin-bottom: 10px; */
     padding: 10px;
     border-radius: 10px;
     outline: none;
@@ -41,4 +42,32 @@ html,body
 {
     background-color:#cb3b3b ;
     color: white;
+    /* position: relative; */
+}
+.container-fluid .row .center .form1 .field
+{
+    position: relative;
+}
+.container-fluid .row .center .form1 .field i
+{
+    position: absolute;
+    right: 2%;
+    top: 28px;
+    visibility: hidden;
+}
+.container-fluid .row .center .form1 .field i.fa-check-circle
+{
+    color: chartreuse;
+    visibility: visible;
+}
+.container-fluid .row .center .form1 .field i.fa-exclamation-circle
+{
+    color: crimson;
+    visibility: visible;
+}
+.container-fluid .row .center .form1 .field small
+{
+    visibility: hidden;
+    bottom: 0;
+    left: 0;
 }
