@@ -9,6 +9,7 @@
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- JS, Popper.js, and jQuery -->
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
@@ -21,43 +22,44 @@
             <div class="col-6 center">
                 <form class="form1">
                     <div class="Email field">
-                        <input type="text" name="mail" placeholder="Enter Your mail-id">
+                        <input type="text" name="mail" id="mail" placeholder="Enter Your mail-id">
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Error Message</small>
                     </div>
                     <div class="Password field">
-                        <input type="text" name="pwd" placeholder="Enter Password"> 
+                        <input type="text" name="pwd" id="pwd" placeholder="Enter Password"> 
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Error Message</small>
                     </div>
                     <div class="Re-Password field">
-                        <input type="text" name="Vpwd" placeholder="Re-Enter Your Password">
+                        <input type="text" name="Vpwd" id="Vpwd" placeholder="Re-Enter Your Password">
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Error Message</small>
                     </div>
-                    <div class="Mobile field">
-                        <input type="text" name="number" placeholder="Enter Your Mobile Number">
+                    <div class="field" id="Mobile">
+                        <input type="text" name="number" id="number" placeholder="Enter Your Mobile Number">
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
-                        <small>Error Message</small>
+                        <small></small>
                     </div>
                     <div class="username field">
-                        <input type="text" name="uname" placeholder="Enter your name">
+                        <input type="text" name="uname" id="uname" placeholder="Enter your name">
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Error Message</small>
                     </div>
                     <div class="Button field">
-                        <input type="button" name="submit" value="Submit">
+                        <input type="submit" name="submit" id="submit" value="Submit">
+                        <!-- <button>Click this</button> -->
                     </div>
                 </form>
             </div>
             <div class="col-3 rightside"></div>
         </div>
     </div>
-    
+<script src="validation.js"></script>
 </body>
 </html>

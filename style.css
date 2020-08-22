@@ -31,12 +31,19 @@ html,body
 .container-fluid .row .center .form1 input
 {
     width: 100%;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     /* margin-bottom: 10px; */
     padding: 10px;
     border-radius: 10px;
     outline: none;
-    border: none;
+    border: 2px solid white;
+    display: block;
+    /* border-color: crimson; */
+}
+.container-fluid .row .center .form1 input:focus
+{
+    outline: 0;
+    border-color: rgb(116, 102, 102);
 }
 .container-fluid .row .center .form1 .Button input
 {
@@ -46,28 +53,31 @@ html,body
 }
 .container-fluid .row .center .form1 .field
 {
+    margin-bottom: 30px;
     position: relative;
 }
 .container-fluid .row .center .form1 .field i
 {
     position: absolute;
     right: 2%;
-    top: 28px;
+    top: 20px;
     visibility: hidden;
 }
 .container-fluid .row .center .form1 .field i.fa-check-circle
 {
-    color: chartreuse;
-    visibility: visible;
+    color: #2ecc71;
+    visibility: hidden;
 }
 .container-fluid .row .center .form1 .field i.fa-exclamation-circle
 {
     color: crimson;
-    visibility: visible;
+    visibility: hidden;
 }
 .container-fluid .row .center .form1 .field small
 {
     visibility: hidden;
-    bottom: 0;
-    left: 0;
+    position: absolute;
+    /* bottom: 0; */
+    color: red;
+    left: 0; 
 }
