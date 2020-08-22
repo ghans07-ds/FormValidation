@@ -11,10 +11,28 @@ form.addEventListener('submit',(event) => {
     validate();
 })
 
-//validate mail through Regular Expression...
+//function for validate mail through Regular Expression...
 const isMail = (mailVal) =>{
-    let regex=/^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
+    let regex=/^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;  //Regular Expression of Email..
     if(regex.test(mailVal)){
+        return true;
+    }
+    return false;
+}
+
+//function for validate Mobile Number through Regular Expression...
+const isPhone = (phoneVal) =>{
+    let regex=/^(\d){10}$/;  //Regular Expression of Mobile Number..
+    if(regex.test(phoneVal)){
+        return true;
+    }
+    return false;
+}
+
+//function for validate Username through Regular Expression...
+const isName = (nameVal) =>{
+    let regex=/^([a-z\d]){3,10}$/;  ////Regular Expression of Username..
+    if(regex.test(nameVal)){  
         return true;
     }
     return false;
@@ -36,6 +54,28 @@ const validate = () =>{
         setErrormsg(mail,"Invalid Mail");
     }else{
         setSuccessmsg(mail);
+    }
+
+    //Mobile Number validation
+    if(phoneVal === ""){
+        setErrormsg(phone,"Mobile Number can't be empty!");
+    }else if(!isPhone(phoneVal)){
+        setErrormsg(phone,"Invalid Mobile Number");
+    }else{
+        setSuccessmsg(phone);
+    }
+
+    //Username Validation
+    if(nameVal === ""){
+        setErrormsg(name,"Username can't be empty!");
+    }else if(!isName(nameVal)){
+        if(nameVal.length<3){
+            setErrormsg(name,"Username must be greter than three character");
+        }else{
+            setErrormsg(name,"Invalid Username");
+        }
+    }else{
+        setSuccessmsg(name);
     }
 }
 
