@@ -38,12 +38,20 @@ const isName = (nameVal) =>{
     return false;
 }
 
+//function for validate Password through Regular Expression...
+const isPassword = (passwordVal) =>{
+    let regex=/^[\w@-]{8,20}$/;
+    if(regex.test(passwordVal)){  
+        return true;
+    }
+    return false;
+}
 //validation function...
 const validate = () =>{
      
     const mailVal= mail.value.trim();
     const passwordVal= password.value.trim();
-    const VpasswordVal= Vpassword.value.trim();
+    const vPasswordVal= Vpassword.value.trim();
     const phoneVal= phone.value.trim();
     const nameVal=  name.value.trim();
 
@@ -77,7 +85,26 @@ const validate = () =>{
     }else{
         setSuccessmsg(name);
     }
+
+    //password Validation
+    if(passwordVal === ""){
+        setErrormsg(password,"password can't be empty!");
+    }else if(!isPassword(passwordVal)){
+        setErrormsg(password,"password is not valid");
+    }else{
+        setSuccessmsg(password);
+    }
+
+    //password matching..
+    if(vPasswordVal === ""){
+        setErrormsg(Vpassword,"password can't be empty!");
+    }else if(vPasswordVal === passwordVal){
+        setSuccessmsg(Vpassword);
+    }else{
+        setErrormsg(Vpassword,"Password not matching");
+    }
 }
+
 
 function setErrormsg(input,errormsgs){
     const field=input.parentElement;
