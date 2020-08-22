@@ -65,19 +65,37 @@ html,body
 }
 .container-fluid .row .center .form1 .field i.fa-check-circle
 {
-    color: #2ecc71;
     visibility: hidden;
 }
 .container-fluid .row .center .form1 .field i.fa-exclamation-circle
 {
-    color: crimson;
     visibility: hidden;
+}
+.container-fluid .row .center .form1 .field.success i.fa-check-circle
+{
+    visibility: visible;
+    color: #2ecc71;
+}
+.container-fluid .row .center .form1 .field.error i.fa-exclamation-circle
+{
+    visibility: visible;
+    color: crimson;
+}
+.container-fluid .row .center .form1 .field.error small
+{
+    visibility: visible;
+    color: red;
 }
 .container-fluid .row .center .form1 .field small
 {
     visibility: hidden;
     position: absolute;
-    /* bottom: 0; */
     color: red;
     left: 0; 
+}
+.container-fluid .row .center .form1 .field.success input{
+    border: 2px solid #2ecc71;
+}
+.container-fluid .row .center .form1 .field.error input{
+    border: 2px solid red;
 }
